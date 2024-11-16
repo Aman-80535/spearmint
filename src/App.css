@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+
+.reflected-container {
+  position: relative;
+  width: 300px; /* Example width */
+  height: 200px; /* Example height */
+  overflow: hidden; /* Hide the original part */
+}
+
+.reflected-image {
+  width: 100%; /* Ensure the image is full-width of its container */
+  height: 100%; /* Ensure the image is full-height of its container */
+  -webkit-box-reflect: below 0px linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 100%); /* Apply reflection */
+  object-fit: cover; /* Ensures the image covers the container properly */
+  transform: scaleY(-1); /* Flip the image vertically for the reflection */
+}
